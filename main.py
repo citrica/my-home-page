@@ -8,9 +8,21 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about", methods=["GET"])
+@app.route("/about", methods=["GET", "POST"])
 def about_me():
-    return render_template("about.html")
+    if request.method == "GET":
+        return render_template("about.html")
+    elif request.method == "POST":
+        contact_name = request.form.get("contact-name")
+        contact_email = request.form.get("contact-email")
+        contact_message = request.form.get("contact-message")
+
+        print(contact_name)
+        print(contact_email)
+        print(contact_message)
+
+        return render_template("success.html")
+
 
 
 @app.route("/portfolio")
@@ -31,19 +43,6 @@ def boogle():
 @app.route("/portfolio/hair-salon")
 def hairsalon():
     return render_template("hair-salon.html")
-
-
-@app.route("/contact", methods=["POST"])
-def contact():
-    contact_name = request.form.get("contact-name")
-    contact_email = request.form.get("contact-email")
-    contact_message = request.form.get("contact-message")
-
-    print(contact_name)
-    print(contact_email)
-    print(contact_message)
-
-    return render_template("success.html")
 
 
 if __name__ == '__main__':
