@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+{% block title %} <h1> My Portfolio: </h1>{% endblock title %}
     <p>
         <a href="/portfolio/fakebook">Fakebook</a>
+        <br>
         <a href="/portfolio/boogle">Boogle</a>
+        <br>
         <a href="/portfolio/hair-salon">Hair Salon</a>
+        <br>
     </p>
-</body>
-</html>
+{% endblock content %}
