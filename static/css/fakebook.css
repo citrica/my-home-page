@@ -1,0 +1,55 @@
+body {
+    background-color: #ffff99;
+}
+
+h1 {
+    color: #828282;
+}
+
+h2 {
+    height: 20px;
+}
+
+#search {
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#search:hover {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.image {
+  border: 6px black dotted;
+  padding: 15px;
+}
+
+.image:hover {
+  border: 6px orange solid;
+}
+
+.button{
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.button:hover {
+  border-radius: 6px;
+  background-color: #ffa420;
+}
+
+.date {
+    font-family: Helvetica;
+    margin-left: 20px;
+}
+
+#red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
