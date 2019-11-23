@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 {% block title %} <h1> More about me :) </h1> {% endblock title %}
-    <form method="post" action="/about">
-        <input type="text" name="contact-name" placeholder="Enter your name">
-        <br>
 
-        <input type="email" name="contact-email" placeholder="Enter email address">
-        <br>
+    <h3> Contact me: </h3>
+    {% if name %}
+        <p>Hello {{name}} !!!</p>
+    {% endif %}
+        <form method="post" action="/about">
+            <input type="text" name="contact-name" placeholder="Enter your name">
+            <br>
+            <input type="email" name="contact-email" placeholder="Enter email address">
+            <br>
+            <textarea name="contact-message" placeholder="Enter your message"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
 
-        <textarea name="contact-message" placeholder="Enter your message"></textarea>
-        <br>
-
-        <button type="submit">Submit</button>
-    </form>
 {% endblock content %}
